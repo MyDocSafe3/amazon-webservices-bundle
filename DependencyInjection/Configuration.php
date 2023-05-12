@@ -27,8 +27,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('the_phalcons_amazon_web_services');
+        $treeBuilder = new TreeBuilder('the_phalcons_amazon_web_services');
+        $rootNode = $treeBuilder->getRootNode();
 
         $this->addWSConfiguration($rootNode);
         $this->addServicesConfiguration($rootNode);

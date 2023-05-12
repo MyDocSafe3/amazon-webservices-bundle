@@ -10,7 +10,7 @@
     </parameters>
 
     <services>
-        <service id="aws" class="%aws.class%" public="false">
+        <service id="aws" class="%aws.class%" public="true">
             <argument type="collection">
                 <argument key="enable_extensions">%the_phalcons_amazon_web_services.enable_extensions%</argument>
 
@@ -93,7 +93,7 @@
             <argument>RDS</argument>
         </service>
 
-        <service id="aws_s3" class="AmazonS3" parent="aws_service">
+        <service id="aws_s3" class="AmazonS3" parent="aws_service"  public="true">
             <argument>S3</argument>
         </service>
 
